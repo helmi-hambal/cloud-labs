@@ -12,3 +12,5 @@ Repo ni jadi bukti progress & portfolio sepanjang 2 minggu cuti.
 
 ## Log
 - Day 0 (Kick-off): Repo setup + first Linux notes.
+- Day 0: Setup repo + Azure VM created (Ubuntu 22.04), able to SSH.
+
