@@ -16,13 +16,25 @@ This repository serves as a portfolio of labs, scripts, and learning progress ov
 
 ---
 
+## Labs Index
+
+- [Linux Lab 1 – Users & Groups](linux/users.md)  
+- [Linux Lab 2 – File Permissions & Ownership](linux/permissions.md)  
+- [Linux Lab 3 – Processes & Services](linux/processes.md)  
+- [Linux Lab 4 – Networking & Logs](linux/networking_logs.md)  
+
+---
+
 ## Progress Log
 
 | Day | Task / Lab | Status |
 |---|---|---|
 | Day 0 | Repo setup + Linux users/groups notes | ✅ Done |
+| Day 1 | Linux Lab 1 – Users & Groups | ✅ Done |
+| Day 2 | Linux Lab 2 – File Permissions | 🚧 In Progress |
+| Day 3 | Linux Lab 3 – Processes & Services | ⏳ Pending |
+| Day 4 | Linux Lab 4 – Networking & Logs | ⏳ Pending |
 
----
 
 
 
