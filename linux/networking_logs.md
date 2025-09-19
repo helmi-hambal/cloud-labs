@@ -3,7 +3,7 @@
 hostname -I
 ip addr show
 ip -4 route
-ip -6 route```
+ip -6 route
 
 - Confirmed VM IP: 172.16.0.4
 - Default gateway: 172.16.0.1
