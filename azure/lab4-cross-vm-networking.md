@@ -53,8 +53,8 @@ pkill -f "python3 -m http.server 8080"
 
 ### Results
 
-*SSH cross-VM (private IP) → Success
+- SSH cross-VM (private IP) → Success
 
-*HTTP service test (VM2 → VM1) → Success
+- HTTP service test (VM2 → VM1) → Success
 
-*Verified intra-subnet communication allowed by default in Azure VNet.
+- Verified intra-subnet communication allowed by default in Azure VNet.
