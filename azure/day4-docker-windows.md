@@ -65,8 +65,11 @@ Error:
 no matching manifest for windows/amd64 10.0.20348
 ```
 💡 Sebab: Windows Docker hanya support Windows container, bukan Linux image.
+
 💡 Sebab: Windows Docker hanya support Windows-based container images.
+
 👉 Solusi: gunakan IIS image (mcr.microsoft.com/windows/servercore/iis) atau cuba Docker Linux dalam VM Linux.
+
 ---
 
 ### 5. IIS Container (Windows)
