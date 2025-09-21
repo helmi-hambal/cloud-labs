@@ -6,6 +6,12 @@ Fokus: faham limitation Windows container vs Linux container.
 
 ---
 
+## 🛠️ Prasyarat
+Azure subscription aktif  
+VM: Windows Server 2022 Datacenter  
+Size: **Standard_D4s_v5** (sekurang-kurangnya 4 vCPU, 16GB RAM)  
+NSG port 3389 dibuka untuk RDP
+
 ## 🛠️ Langkah-langkah
 
 ### 1. Sediakan VM Windows
@@ -59,7 +65,8 @@ Error:
 no matching manifest for windows/amd64 10.0.20348
 ```
 💡 Sebab: Windows Docker hanya support Windows container, bukan Linux image.
-
+💡 Sebab: Windows Docker hanya support Windows-based container images.
+👉 Solusi: gunakan IIS image (mcr.microsoft.com/windows/servercore/iis) atau cuba Docker Linux dalam VM Linux.
 ---
 
 ### 5. IIS Container (Windows)
@@ -86,9 +93,18 @@ Check:
 🚀 What’s Next
 
 - Cuba Linux VM untuk test Docker Linux image (nginx, mysql, redis, dsb).
-
 - Explore Docker Compose untuk multi-container apps.
-
 - Bandingkan performance Windows container vs Linux container.
-
 - Integrasi dengan Azure Container Instances atau AKS bila dah ready.
+
+### Belajar lebih jauh
+- Cuba **Linux VM** untuk test Docker Linux image (nginx, mysql, redis, dsb).  
+- Explore **Docker Compose** untuk multi-container apps.  
+- Bandingkan performance **Windows container vs Linux container**.  
+- Integrasi dengan **Azure Container Instances (ACI)** atau **Azure Kubernetes Service (AKS)**.
+
+### Reflection
+Hari ni belajar bahawa:
+- Windows container ada limitation bila run Linux images.
+- IIS image berjaya jalan, tapi untuk apps moden lebih sesuai guna Linux container.  
+- Next time: test on Ubuntu VM untuk run Nginx container.
