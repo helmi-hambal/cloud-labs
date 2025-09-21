@@ -25,6 +25,8 @@ az vm open-port -g rg-lab-net -n win-docker --port 3389
 ```
 Login VM guna Remote Desktop.
 
+---
+
 #### 3. Install Dokcer (manual setup)
 ```powershell
 Invoke-WebRequest https://download.docker.com/win/static/stable/x86_64/docker-20.10.24.zip -OutFile docker.zip
@@ -40,6 +42,9 @@ Verify:
 ```powershell
 docker --version
 ```
+
+---
+
 ### 4. Test container
 Hello World
 ```powershell
@@ -55,6 +60,8 @@ no matching manifest for windows/amd64 10.0.20348
 ```
 💡 Sebab: Windows Docker hanya support Windows container, bukan Linux image.
 
+---
+
 ### 5. IIS Container (Windows)
 ```powershell
 docker run -d -p 8080:80 mcr.microsoft.com/windows/servercore/iis
@@ -64,3 +71,12 @@ Check:
 - Buka browser → http://<Public_IP_VM>:8080
 
 - Nampak IIS default page (“Internet Information Services – Welcome”).
+
+---
+
+⚠️ Masalah & Solusi
+| Masalah                                    | Solusi                                                                                    |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| Nginx container tak jalan                  | Guna Windows-based image (contoh: IIS)                                                    |
+| Download Docker via PowerShell kadang slow | Pastikan VM ada bandwidth cukup, atau gunakan Storage Blob untuk upload installer sendiri |
+| VM terasa berat                            | Guna size lebih besar (contoh: `Standard_D4s_v5`) dengan RAM lebih tinggi                 |
