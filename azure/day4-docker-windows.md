@@ -24,3 +24,13 @@ $env:Path += ";C:\Program Files\docker"
 dockerd --register-service
 Start-Service docker
 ```
+Testing
+Hello-world:
+```powershell
+docker run hello-world
+```
+Windows IIS container:
+```powershell
+docker run -d -p 8080:80 mcr.microsoft.com/windows/servercore/iis
+```
+Output: buka browser → http://<public-ip>:8080 → nampak default IIS welcome page.
