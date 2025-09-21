@@ -53,6 +53,7 @@ Error:
 no matching manifest for windows/amd64 10.0.20348
 ```
 💡 Sebab: Windows Docker hanya support Windows container, bukan Linux image.
+
 5. IIS Container (Windows)
 ```powershell
 docker run -d -p 8080:80 mcr.microsoft.com/windows/servercore/iis
