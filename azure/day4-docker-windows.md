@@ -24,6 +24,7 @@ az vm create \
 az vm open-port -g rg-lab-net -n win-docker --port 3389
 ```
 Login VM guna Remote Desktop.
+
 #### 3. Install Dokcer (manual setup)
 ```powershell
 Invoke-WebRequest https://download.docker.com/win/static/stable/x86_64/docker-20.10.24.zip -OutFile docker.zip
