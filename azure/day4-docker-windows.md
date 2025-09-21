@@ -80,3 +80,15 @@ Check:
 | Nginx container tak jalan                  | Guna Windows-based image (contoh: IIS)                                                    |
 | Download Docker via PowerShell kadang slow | Pastikan VM ada bandwidth cukup, atau gunakan Storage Blob untuk upload installer sendiri |
 | VM terasa berat                            | Guna size lebih besar (contoh: `Standard_D4s_v5`) dengan RAM lebih tinggi                 |
+
+---
+
+🚀 What’s Next
+
+- Cuba Linux VM untuk test Docker Linux image (nginx, mysql, redis, dsb).
+
+- Explore Docker Compose untuk multi-container apps.
+
+- Bandingkan performance Windows container vs Linux container.
+
+- Integrasi dengan Azure Container Instances atau AKS bila dah ready.
