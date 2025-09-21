@@ -19,12 +19,12 @@ az vm create \
   --admin-password '********' \
   --public-ip-sku Standard
 ```
-2. Buka port RDP (3389)
+### 2. Buka port RDP (3389)
 ```bash
 az vm open-port -g rg-lab-net -n win-docker --port 3389
 ```
 Login VM guna Remote Desktop.
-3. Install Dokcer (manual setup)
+#### 3. Install Dokcer (manual setup)
 ```powershell
 Invoke-WebRequest https://download.docker.com/win/static/stable/x86_64/docker-20.10.24.zip -OutFile docker.zip
 Expand-Archive docker.zip -DestinationPath 'C:\Program Files\docker'
@@ -39,7 +39,7 @@ Verify:
 ```powershell
 docker --version
 ```
-4. Test container
+### 4. Test container
 Hello World
 ```powershell
 docker run hello-world
@@ -54,7 +54,7 @@ no matching manifest for windows/amd64 10.0.20348
 ```
 💡 Sebab: Windows Docker hanya support Windows container, bukan Linux image.
 
-5. IIS Container (Windows)
+### 5. IIS Container (Windows)
 ```powershell
 docker run -d -p 8080:80 mcr.microsoft.com/windows/servercore/iis
 ```
