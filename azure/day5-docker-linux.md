@@ -83,3 +83,25 @@ docker run -d \
 - Able to run single (nginx) and multi-container (WordPress + MySQL) apps.
 
 - Learned basic networking & port mapping in Docker.
+
+## 🐞 Troubleshooting / Challenges faced
+- Port conflict: dulu ada container `nginx-web` occupy port `8080`, jadi WordPress tak boleh start sampai `nginx-web` di-stop dan di-remove.  
+- Naming conflict: container name `wp-mysql` dan `wordpress` dah ada dari eksperimen pertama, menyebabkan `docker-compose up` gagal → perlu `docker rm` lama dulu.  
+- `.pem` file issue: Cloud Shell ephemeral, `.pem` hilang, kena upload semula atau reset SSH key.
+
+## 🛠 Debug techniques used
+- `docker ps -a` untuk senaraikan semua containers (termasuk exited).  
+- `docker logs <container_name>` untuk tengok detail kenapa salah satu service tak start.  
+- `curl ifconfig.me` untuk confirm IP semasa untuk NSG SSH rule.
+
+## 🔒 Security & Best Practices Notes
+- Port 8080 dibuka, tapi hanya HTTP untuk lab sahaja. Untuk production, gunakan HTTPS + domain.  
+- DB port 3306 tidak diekspos ke internet. Container DB hanya boleh diakses melalui network `wp-net`.  
+- SSH rule awalnya dikunci ke IP tertentu, tapi dibuka untuk testing. Penting untuk set semula hanya IP kau untuk security.
+
+## 🚀 What’s next
+- Build `Dockerfile` untuk custom WordPress image atau plugin.  
+- Guna `nginx` sebagai reverse proxy untuk WordPress site.  
+- Setup Docker Compose dengan file `.env` supaya password / credentials tidak hard-coded.  
+- Automate deployment + backup (cron job atau Azure Automation).  
+
